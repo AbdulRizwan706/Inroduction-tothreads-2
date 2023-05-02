@@ -11,7 +11,8 @@ public class Client {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
         int y = sc.nextInt();
-        Adder add = new Adder(x, y);
+        Adder add = new Adder();
+        add.num1 = x; add.num2 = y;
         ScalerThread t1 = new ScalerThread(add);
         t1.start();
 
