@@ -7,13 +7,13 @@
 import java.util.Scanner;
 
 public class Client {
-    static Scanner sc = new Scanner(System.in);
-    static int x = sc.nextInt();
-    static int y = sc.nextInt();
-    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int x = sc.nextInt();
+    int y = sc.nextInt();
+    public void main(String[] args) {
         Adder add = new Adder();
-        add.num1 = x;
-        add.num2 = y;
+        add.num1 = this.x;
+        add.num2 = this.y;
         ScalerThread t1 = new ScalerThread(add);
         t1.start();
 
